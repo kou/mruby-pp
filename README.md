@@ -2,6 +2,12 @@
 
 `pp` for mruby. It is imported from CRuby.
 
+## Install
+
+Add the following line to your `build_config.rb`:
+
+    config.gem :github => "kou/mruby-pp"
+
 ## Usage
 
     object = {
