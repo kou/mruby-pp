@@ -18,4 +18,5 @@ task :tag do
   /version = \"(.+?)\"/ =~ File.read("mrbgem.rake")
   version = $1
   sh("git", "tag", "-a", "-m", "#{version} has been released!!!", version)
+  sh("git", "push", "--tags")
 end
