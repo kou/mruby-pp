@@ -1,6 +1,6 @@
 # -*- ruby -*-
 #
-# Copyright (c) 2014 Kouhei Sutou <kou@cozmixng.org>
+# Copyright (C) 2014 Kouhei Sutou <kou@cozmixng.org>
 
 task :default => :test
 

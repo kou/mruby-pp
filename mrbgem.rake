@@ -1,7 +1,7 @@
-# Copyright (c) 2014 Kouhei Sutou <kou@cozmixng.org>
+# Copyright (C) 2014 Kouhei Sutou <kou@cozmixng.org>
 
 MRuby::Gem::Specification.new("mruby-pp") do |spec|
-  spec.license = "MIT"
+  spec.license = "BSD-2-Clause"
   spec.authors = [
     "Kouhei Sutou",
     "Tanaka Akira",

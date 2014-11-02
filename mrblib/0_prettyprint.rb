@@ -1,4 +1,4 @@
-# Copyright (c) 2014 Kouhei Sutou <kou@cozmixng.org>
+# Copyright (C) 2014 Kouhei Sutou <kou@cozmixng.org>
 
 # This file is based on prettyprint.rb in CRuby.
 
