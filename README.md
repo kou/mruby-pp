@@ -22,7 +22,7 @@ Add the following line to your `build_config.rb`:
 
 ## License
 
-MIT License
+BSD 2-clause "Simplified" License
 
 ## Authors
 
