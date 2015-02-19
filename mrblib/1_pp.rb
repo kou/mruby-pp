@@ -123,12 +123,6 @@ class PP < PrettyPrint
     out
   end
 
-  # :stopdoc:
-  def PP.mcall(obj, mod, meth, *args, &block)
-    mod.instance_method(meth).bind(obj).call(*args, &block)
-  end
-  # :startdoc:
-
   @sharing_detection = false
   class << self
     # Returns the sharing detection flag as a boolean value.
@@ -382,8 +376,8 @@ end
 
 class Struct # :nodoc:
   def pretty_print(q) # :nodoc:
-    q.group(1, sprintf("#<struct %s", PP.mcall(self, Kernel, :class).name), '>') {
-      q.seplist(PP.mcall(self, Struct, :members), lambda { q.text "," }) {|member|
+    q.group(1, sprintf("#<struct %s", self.class), '>') {
+      q.seplist(members, lambda { q.text "," }) {|member|
         q.breakable
         q.text member.to_s
         q.text '='
@@ -396,7 +390,7 @@ class Struct # :nodoc:
   end
 
   def pretty_print_cycle(q) # :nodoc:
-    q.text sprintf("#<struct %s:...>", PP.mcall(self, Kernel, :class).name)
+    q.text sprintf("#<struct %s:...>", self.class)
   end
 end
 

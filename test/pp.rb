@@ -107,3 +107,25 @@ assert("pp - Object") do
  @variable5="value5">
   PP
 end
+
+assert("pp - Struct") do
+  struct_class = Struct.new(:variable1,
+                            :variable2,
+                            :variable3,
+                            :variable4,
+                            :variable5)
+
+  struct = struct_class.new("value1",
+                            "value2",
+                            "value3",
+                            "value4",
+                            "value5")
+  assert_equal(<<-PP, struct.pretty_inspect)
+\#<struct #{struct.class.to_s}
+ variable1="value1",
+ variable2="value2",
+ variable3="value3",
+ variable4="value4",
+ variable5="value5">
+  PP
+end
