@@ -13,6 +13,14 @@ task :test => "mruby" do
   end
 end
 
+desc "Clean"
+task :clean => "mruby" do
+  ENV["MRUBY_CONFIG"] = File.expand_path("config/test.rb")
+  cd("mruby") do
+    sh("rake", "clean")
+  end
+end
+
 desc "Tag"
 task :tag do
   /version = \"(.+?)\"/ =~ File.read("mrbgem.rake")
