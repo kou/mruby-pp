@@ -9,8 +9,6 @@ addons:
   apt:
     packages:
       - bison
-      - git
       - gperf
-      - rake
 script:
   - rake
