@@ -6,7 +6,7 @@ MRuby::Gem::Specification.new("mruby-pp") do |spec|
     "Sutou Kouhei",
     "Tanaka Akira",
   ]
-  spec.version = "1.0.3"
+  spec.version = "1.0.4"
   spec.add_dependency("mruby-metaprog")
   spec.add_dependency("mruby-print")
   spec.add_dependency("mruby-sprintf")
