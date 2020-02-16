@@ -1,4 +1,4 @@
-# Copyright (C) 2014 Kouhei Sutou <kou@cozmixng.org>
+# Copyright (C) 2014-2020 Sutou Kouhei <kou@cozmixng.org>
 
 # This file is based on pp.rb in CRuby.
 
@@ -431,20 +431,20 @@ end
 
 class Object < BasicObject # :nodoc:
   include PP::ObjectMixin
+
+  [Numeric, Symbol, FalseClass, TrueClass, NilClass, Module].each {|c|
+    c.class_eval {
+      def pretty_print_cycle(q)
+        q.text inspect
+      end
+    }
+  }
+
+  [Numeric, FalseClass, TrueClass, NilClass, Module].each {|c|
+    c.class_eval {
+      def pretty_print(q)
+        q.text inspect
+      end
+    }
+  }
 end
-
-[Numeric, Symbol, FalseClass, TrueClass, NilClass, Module].each {|c|
-  c.class_eval {
-    def pretty_print_cycle(q)
-      q.text inspect
-    end
-  }
-}
-
-[Numeric, FalseClass, TrueClass, NilClass, Module].each {|c|
-  c.class_eval {
-    def pretty_print(q)
-      q.text inspect
-    end
-  }
-}
