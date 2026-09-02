@@ -1,5 +1,13 @@
 # News
 
+## 1.0.4: 2026-09-02
+
+### Improvements
+
+  * Add support for mruby 4.0.0.
+
+    * Removed mruby-print dependency.
+
 ## 1.0.3: 2020-02-16
 
 ### Improvements
