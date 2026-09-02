@@ -1,0 +1,25 @@
+# Copyright (C) 2026 Sutou Kouhei <kou@clear-code.com>
+
+name: Test
+on:
+  push:
+    branches-ignore:
+      - 'copilot/**'
+      - 'dependabot/**'
+    tags:
+      - '**'
+  pull_request:
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: true
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y -V bison gperf
+      - name: Test
+        run: rake

@@ -1,0 +1,10 @@
+# Copyright (C) 2026 Sutou Kouhei <kou@clear-code.com>
+
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "ci: "
