@@ -1,4 +1,4 @@
-# Copyright (C) 2014-2020 Sutou Kouhei <kou@cozmixng.org>
+# Copyright (C) 2014-2026 Sutou Kouhei <kou@cozmixng.org>
 
 MRuby::Gem::Specification.new("mruby-pp") do |spec|
   spec.license = "BSD-2-Clause"
@@ -6,7 +6,7 @@ MRuby::Gem::Specification.new("mruby-pp") do |spec|
     "Sutou Kouhei",
     "Tanaka Akira",
   ]
-  spec.version = "1.0.4"
+  spec.version = "1.0.5"
   spec.add_dependency("mruby-metaprog")
   spec.add_dependency("mruby-sprintf")
   spec.add_dependency("mruby-string-ext")
